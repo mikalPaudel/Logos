@@ -26,7 +26,7 @@ const Footer = () => {
             <Link to="https://www.facebook.com/profile.php?id=100094953342789">
               <FaFacebook/>
             </Link>
-            <p>Facebook</p>
+            <p>Facebook: Logos Church Butwal</p>
           </div>
           <div className="col-md-3">
             <Link to="#"><FaPhoneAlt/></Link>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         {/* Row 3: Copyright Info */}
-        <div className="row text-center">
+        <div className="row">
           <div className="col">
             <p>&copy; {new Date().getFullYear()} Logos Church. All rights reserved.</p>
           </div>

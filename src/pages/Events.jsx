@@ -5,9 +5,22 @@ import React from 'react'
 const Events = () => {
   return (
     <>
-    {/* <Header/> */}
-     <div>Events</div>
-     {/* <Footer/> */}
+    <div> 
+  <center><h1>Gospel Reach</h1></center>
+ </div>
+ <div>
+  <center><h1>Refreshment Camp</h1></center>
+ </div>
+ <div>
+ <center> <h1>Seminars</h1></center>
+ </div>
+  <div>
+<center><h1>Baptism</h1></center>
+ </div>
+ <div>
+  <center><h1>Programs</h1></center>
+ </div>
+
     </>
    
   )
