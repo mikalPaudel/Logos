@@ -31,7 +31,7 @@ const Ministries = () => {
   </div>
     <div class="col-md-6">
     <center> 
-      <div className="image-overlay txt-black"><center><h1>Youth Ministry</h1></center></div>
+      <div className="image-overlay txt-black"><center><h1>Children Ministry</h1></center></div>
       <img src="./images/youth.jpg" class="img-fluid" alt="Youth" />
     </center></div>
   </div>
@@ -41,7 +41,7 @@ const Ministries = () => {
   <div class="row justify-content-center">
     <div class="col-md-6">
     <center> 
-      <div className="image-overlay txt-black"><center><h1>Youth Ministry</h1></center></div>
+      <div className="image-overlay txt-black"><center><h1>House Ministry</h1></center></div>
       <img src="./images/youth.jpg" class="img-fluid" alt="Youth" />
     </center></div>
     <div className="col-md-6 text-center d-flex align-self-sm-center">
@@ -64,7 +64,7 @@ const Ministries = () => {
   </div>
     <div class="col-md-6">
     <center> 
-      <div className="image-overlay txt-black"><center><h1>Youth Ministry</h1></center></div>
+      <div className="image-overlay txt-black"><center><h1>Women Ministry</h1></center></div>
       <img src="./images/youth.jpg" class="img-fluid" alt="Youth" />
     </center></div>
   </div>
