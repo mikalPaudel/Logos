@@ -1,9 +1,11 @@
 *{
-    /* background-image: url("https://wallpapercave.com/wp/wp2997373.jpg");  */
-    background-image: url("https://th.bing.com/th/id/R.7b89060c326e921d33589c120103ae46?rik=OhxfvnB9uereVQ&riu=http%3a%2f%2fwww.cbchemet.com%2fwp-content%2fuploads%2f2015%2f02%2fbackground-church.jpg&ehk=iPiCu5GF0GV9Q3QSJEAcjDHk2MuzeThsm9kLLJpPesM%3d&risl=&pid=ImgRaw&r=0");
-    color: #9d9a9a;
+    background-image: url("https://wallpapercave.com/wp/wp2997373.jpg"); 
+    /* background-image: url("https://th.bing.com/th/id/R.7b89060c326e921d33589c120103ae46?rik=OhxfvnB9uereVQ&riu=http%3a%2f%2fwww.cbchemet.com%2fwp-content%2fuploads%2f2015%2f02%2fbackground-church.jpg&ehk=iPiCu5GF0GV9Q3QSJEAcjDHk2MuzeThsm9kLLJpPesM%3d&risl=&pid=ImgRaw&r=0"); */
+    background-color: #333;
+    color: #fdfcfc;
     font-family: serif;
     font-size: medium;
+    background-attachment: fixed;
 }
 
 .about-container {
@@ -29,21 +31,39 @@
   }
 
   .carousel-item img{
-    height: 420px;
-    width:1200px;
-    object-fit: fill;
+    /* height: 420px;
+    width:800px; */
+    object-fit: cover;
     align-items: center;
+    justify-content: center;
+    display: flex;
   }
+/* Add this CSS in your global styles or component-specific styles */
+.carousel-inner {
+  height: 100vh; /* Set the height of the carousel to the full viewport height */
+}
+
+.carousel-image {
+  object-fit: contain; /* Ensure the images cover the entire container while maintaining aspect ratio */
+  height: 100%; /* Make sure the image takes the full height of its container */
+  width: 100%; /* Make sure the image takes the full width of its container */
+}
 
   /* header */
 
 .header-container {
-    background-color: #333; /*Add your desired background color */
-    /* background-image: url("./images.worship.jpeg"); */
-    color: #fff; /* Set the text color to white */
-    padding: 10px 20px; /* Add padding to the header */
-    /* background-color: transparent;  */
-   
+    background-color: #333; 
+    color: #fff;
+    /* position: fixed; */
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  transition: top 0.3s; 
+  }
+
+  .header.hidden {
+    top: -80px; 
   }
   
   .logo {
@@ -73,6 +93,37 @@
     border-bottom: 2px solid white;
     transform: scale(1.1); /* Zoom out by 10% on hover (adjust as needed) */
   }
+
+  /* Add this to your CSS file */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.header-scrolled {
+  background-color: #111; /* Dark color when scrolling down */
+}
+
+.header-dark-bg {
+  background-color: #111; /* Dark color when not on the home page */
+}
+
+.header-container header {
+  transition: background-color 0.3s ease;
+}
+
+.header-container header.active {
+  color: rgb(185, 16, 16) ; /* Black color for the active link */
+}
+
+/* Customize other styles as needed */
+
+
+
 
  /* app.css */
 
@@ -107,8 +158,97 @@
     transform: scale(0.9);
     border-bottom: 2px solid white;
   }
-  
 
-  
-  
+  .events-center{
+    text-decoration-color: white;
+    text-decoration: none;
+    
+  }
 
+  /* Include this CSS in a separate stylesheet or as part of your component's CSS */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.map {
+  flex: 1;
+  /* height: 300px; */
+  /* background-color: #f0f0f0; */
+}
+
+.contact-details {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff; /* Set your preferred background color */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f4f5;
+}
+
+/* Style the map iframe */
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: rgb(96, 96, 223);
+}
+
+/* Style service hours for better readability */
+ul ul li {
+  margin-left: 20px;
+}
+
+.contact-form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Add more styles as needed */

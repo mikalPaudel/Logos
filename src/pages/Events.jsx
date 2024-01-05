@@ -6,19 +6,19 @@ const Events = () => {
   return (
     <>
     <div> 
-  <center><h1>Gospel Reach</h1></center>
+  <center><h1><a href=''>Gospel Reach</a></h1></center>
  </div>
  <div>
-  <center><h1>Refreshment Camp</h1></center>
+  <center><h1><a href=''>Refreshment Camp</a></h1></center>
  </div>
  <div>
- <center> <h1>Seminars</h1></center>
+ <center> <h1><a href=''>Seminars</a></h1></center>
  </div>
   <div>
-<center><h1>Baptism</h1></center>
+<center><h1><a href=''>Baptism</a></h1></center>
  </div>
  <div>
-  <center><h1>Programs</h1></center>
+  <center><h1><a href=''>Programs</a></h1></center>
  </div>
 
     </>
