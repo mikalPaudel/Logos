@@ -18,7 +18,7 @@ const Contacts = () => {
       </div>
       <div className="contact-details">
         <center><b><h1>Contact Us</h1></b>
-        <ContactForm/>
+        {/* <ContactForm/> */}
         <ul>
           <li><strong>Weekly Service Hours:</strong></li>
           <ul>

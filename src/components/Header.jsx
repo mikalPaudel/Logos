@@ -33,19 +33,9 @@ const Header = () => {
 
         {/* Navigation Links */}
         <ul className="nav nav-pills header-nav">
-          {/* <li className="nav-item">
-            <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} aria-current="page">Home</Link>
-          </li> */}
-          <li className="nav-item">
-          <NavLink to="/" className="nav-link" exact activeClassName="active">
-    Home
-  </NavLink>
-</li>
-<li className="nav-item">
-            <NavLink to="/ministries" className="nav-link" activeClassName="active">
-              Ministries
-            </NavLink>
-          </li>
+        
+          <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+          <li className="nav-item"><Link to="/ministries" className="nav-link">Ministry</Link></li>
            {/* <li className="nav-item"><Link to="/events" className="nav-link">Events</Link></li> */}
            <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
           <li className="nav-item"><Link to="/contacts" className="nav-link">Contact Us</Link></li>
