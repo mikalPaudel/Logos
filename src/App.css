@@ -94,7 +94,7 @@
     transform: scale(1.1); /* Zoom out by 10% on hover (adjust as needed) */
   }
 
-  /* Add this to your CSS file */
+  /* Add this to your CSS file
 .header-container {
   position: fixed;
   top: 0;
@@ -102,7 +102,7 @@
   right: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
-}
+} */
 
 .header-scrolled {
   background-color: #111; /* Dark color when scrolling down */
@@ -116,9 +116,11 @@
   transition: background-color 0.3s ease;
 }
 
-.header-container header.active {
-  color: rgb(185, 16, 16) ; /* Black color for the active link */
-}
+/* .header-container header .nav-link.active { */
+  /* background-color: rgb(7, 7, 7) !important; Black color for the active link */
+  /* color: #fff; Optional: Change the text color for better visibility */
+/* } */
+
 
 /* Customize other styles as needed */
 
