@@ -1,10 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import About from '../pages/About';
+import Ministries from '../pages/Ministries';
+import Contacts from '../pages/Contacts';
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
-  // const location = useLocation();
+  // const location = useLocation(); 
 
   const handleScroll = useCallback(() => {
     setScrollTop(document.documentElement.scrollTop);
@@ -34,13 +38,31 @@ const Header = () => {
         {/* Navigation Links */}
         <ul className="nav nav-pills header-nav">
         
-          <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
-          <li className="nav-item"><Link to="/ministries" className="nav-link">Ministry</Link></li>
-           {/* <li className="nav-item"><Link to="/events" className="nav-link">Events</Link></li> */}
-           <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
-          <li className="nav-item"><Link to="/contacts" className="nav-link">Contact Us</Link></li>
+          <li className="nav-item"><NavLink to="/" className="nav-link">Home</NavLink></li>
+           {/* <li className="nav-item"><NavLink to="/events" className="nav-link">Events</NavLink></li> */}
+           <li className="nav-item"><NavLink to="/about" className="nav-link">About</NavLink></li>
+          <li className="nav-item"><NavLink to="/ministries" className="nav-link">Ministry</NavLink></li>
+          <li className="nav-item"><NavLink to="/contacts" className="nav-link">Contact Us</NavLink></li>
         </ul>
       </header>
+      {/* <main>
+        <section id="home">
+          <h2>Home</h2>
+          <HomePage />
+        </section>
+        <section id="about">
+          <h2>About</h2>
+          <About />
+        </section>
+        <section id="ministry">
+          <h2>Ministry</h2>
+          <Ministries />
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <Contacts />
+        </section>
+      </main> */}
     </div>
   );
 };

@@ -1,124 +1,140 @@
 *{
-    background-image: url("https://wallpapercave.com/wp/wp2997373.jpg"); 
-    /* background-image: url("https://th.bing.com/th/id/R.7b89060c326e921d33589c120103ae46?rik=OhxfvnB9uereVQ&riu=http%3a%2f%2fwww.cbchemet.com%2fwp-content%2fuploads%2f2015%2f02%2fbackground-church.jpg&ehk=iPiCu5GF0GV9Q3QSJEAcjDHk2MuzeThsm9kLLJpPesM%3d&risl=&pid=ImgRaw&r=0"); */
-    background-color: #333;
-    color: #fdfcfc;
-    font-family: serif;
-    font-size: medium;
-    background-attachment: fixed;
+  /* background-image: url("https://wallpapercave.com/wp/wp2997373.jpg");  */
+  /* background-image: url("https://th.bing.com/th/id/R.7b89060c326e921d33589c120103ae46?rik=OhxfvnB9uereVQ&riu=http%3a%2f%2fwww.cbchemet.com%2fwp-content%2fuploads%2f2015%2f02%2fbackground-church.jpg&ehk=iPiCu5GF0GV9Q3QSJEAcjDHk2MuzeThsm9kLLJpPesM%3d&risl=&pid=ImgRaw&r=0"); */
+  /* background-color: #333; */
+  /* color: #fdfcfc; */
+  font-family: serif;
+  font-size: medium;
+  background-attachment: fixed;
 }
 
 .about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: xx-large
+display: flex;
+flex-direction: column;
+align-items: center;
+font-size: xx-large
 }
-  
-  .custom-header {
-    background-color: #f8f9fa; /* Replace this with your desired background color */
-    color: transparent; /* Set the text color to transparent */
-    font-size: 24px; /* Adjust the font size as needed */
-    padding: 20px; /* Add padding to create space between content and header */
-    margin-bottom: 20px; /* Optional: Add margin to create space below the header */
-  }
 
-  /* carousel.css */
-  .carousel-caption{
-    background-color: #f8f9fa; /* Replace this with your desired background color */
-    color: transparent; 
-    font-size: 24px;
-  }
+.custom-header {
+  /* background-color: #f8f9fa; Replace this with your desired background color */
+  color: transparent; /* Set the text color to transparent */
+  font-size: 24px; /* Adjust the font size as needed */
+  padding: 20px; /* Add padding to create space between content and header */
+  margin-bottom: 20px; /* Optional: Add margin to create space below the header */
+}
 
-  .carousel-item img{
-    /* height: 420px;
-    width:800px; */
-    object-fit: cover;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
+/* carousel.css */
+.carousel-caption{
+  /* background-color: #f8f9fa; Replace this with your desired background color */
+  /* color: transparent;  */
+  font-size: 24px;
+}
+
+.carousel-item img{
+  /* height: 420px;
+  width:800px; */
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 /* Add this CSS in your global styles or component-specific styles */
 .carousel-inner {
-  height: 100vh; /* Set the height of the carousel to the full viewport height */
+height: 100vh; /* Set the height of the carousel to the full viewport height */
 }
 
 .carousel-image {
-  object-fit: contain; /* Ensure the images cover the entire container while maintaining aspect ratio */
-  height: 100%; /* Make sure the image takes the full height of its container */
-  width: 100%; /* Make sure the image takes the full width of its container */
+object-fit: contain; /* Ensure the images cover the entire container while maintaining aspect ratio */
+height:fit-content;
+width: 100%;
+border-radius: 45px; /* Rounded edges */
+padding: 20px; /* Add padding to left and right */
 }
 
-  /* header */
+.carousel-container {
+  position: relative;
+  padding: 20px;
+}
+
+/* header */
 
 .header-container {
-    background-color: #333; 
-    color: #fff;
-    /* position: fixed; */
-  top: 0;
-  width: 100%;
-  padding: 15px;
-  text-align: center;
-  transition: top 0.3s; 
-  }
+  /* background-color: #333;  */
+  /* color: #fff; */
+  /* position: fixed; */
+top: 0;
+width: 100%;
+height: 50%;
+padding: 15px;
+text-align: center;
+transition: top 0.5s; 
+position: sticky;
+background-color:rgba(255, 255, 255, 0.5); /* Add your desired background color */
+z-index: 1000; /* Ensure it stays on top of other content */
+}
 
-  .header.hidden {
-    top: -80px; 
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    margin-right: 10px; /* Add some space between the logo and the logo text */
-    border-radius: 50px;
-  }
-  
-  .logo-text {
-    font-size: 24px; /* Adjust the font size of the logo text */
-    font-weight: bold;
-  }
+.header.hidden {
+  top: -80px; 
+}
 
-  
-  /* Header navigation items styles */
-  .header-nav .nav-item .nav-link {
-    color: white;
-    text-decoration: none;
-  transition: transform 0.2s; /* Add the transform property with transition */
-  }
-  
-  .header-nav .nav-item .nav-link:hover {
-    border-bottom: 2px solid white;
-    transform: scale(1.1); /* Zoom out by 10% on hover (adjust as needed) */
-  }
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-  /* Add this to your CSS file
+.logo img {
+  margin-right: 10px; /* Add some space between the logo and the logo text */
+  border-radius: 50px;
+}
+
+.logo-text {
+  font-size: 24px; /* Adjust the font size of the logo text */
+  font-weight: bold;
+}
+
+
+/* Header navigation items styles */
+.header-nav .nav-item .nav-link {
+  color: black;
+  text-decoration:none;
+transition: transform 0.2s; /* Add the transform property with transition */
+}
+
+.header-nav .nav-item .nav-link:hover {
+  transform: scale(1.1); /* Zoom out by 10% on hover (adjust as needed) */
+}
+
+.header-nav .nav-item .nav-link.active {
+  border-bottom: 2px solid black; /* Add a black border bottom for the active link */
+  color: black;
+  background-color: transparent;
+}
+
+/* Add this to your CSS file
 .header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+transition: background-color 0.3s ease;
 } */
 
 .header-scrolled {
-  background-color: #111; /* Dark color when scrolling down */
+background-color: #111; /* Dark color when scrolling down */
 }
 
 .header-dark-bg {
-  background-color: #111; /* Dark color when not on the home page */
+background-color: #111; /* Dark color when not on the home page */
 }
 
 .header-container header {
-  transition: background-color 0.3s ease;
+transition: background-color 0.3s ease;
 }
 
 /* .header-container header .nav-link.active { */
-  /* background-color: rgb(7, 7, 7) !important; Black color for the active link */
-  /* color: #fff; Optional: Change the text color for better visibility */
+/* background-color: rgb(7, 7, 7) !important; Black color for the active link */
+/* color: #fff; Optional: Change the text color for better visibility */
 /* } */
 
 
@@ -127,130 +143,159 @@
 
 
 
- /* app.css */
+/* app.css */
 
 /* Header styles */
 /* ... (previous header styles) */
 
 /* Footer styles */
 .footer-container {
-    background-color: #000; /* Set the background color to black */
-    color: #fff; /* Set the text color to white */
-    padding: 20px;
-    min-width: 300px;
-   
-  }
-  
-  .footer-section {
-    margin-bottom: 2rem;
-  }
-  
-  .footer-section h5 {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .footer-section .nav-item .nav-link {
-    color: #fff; /* Set the link color to white */
-    text-decoration: none;
-    transition: transform 0.2s;
-  }
-  
-  .footer-section .nav-item .nav-link:hover {
-    transform: scale(0.9);
-    border-bottom: 2px solid white;
-  }
+  background-color: white; /* Set the background color to black */ 
+  color: black; /* Set the text color to white */
+  padding: 20px;
+  min-width: 300px;
+ 
+}
 
-  .events-center{
-    text-decoration-color: white;
-    text-decoration: none;
-    
-  }
+.footer-section {
+  margin-bottom: 2rem;
+}
 
-  /* Include this CSS in a separate stylesheet or as part of your component's CSS */
+.footer-section h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-section .nav-item .nav-link {
+  color: black; /* Set the link color to white */
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.footer-section .nav-item .nav-link:hover {
+  transform: scale(0.9);
+  border-bottom: 2px solid white;
+}
+
+.events-center{
+  text-decoration-color: white;
+  text-decoration: none;
+  
+}
+
+/* Include this CSS in a separate stylesheet or as part of your component's CSS */
 
 .contact-container {
-  display: flex;
-  flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
 }
 
 .map {
-  flex: 1;
-  /* height: 300px; */
-  /* background-color: #f0f0f0; */
+flex: 1;
+/* height: 300px; */
+/* background-color: #f0f0f0; */
 }
 
 .contact-details {
-  flex: 1;
-  padding: 20px;
-  background-color: #fff; /* Set your preferred background color */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-  border-radius: 5px;
+flex: 1;
+padding: 20px;
+background-color: #fff; /* Set your preferred background color */
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+border-radius: 5px;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+font-size: 24px;
+margin-bottom: 20px;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+list-style: none;
+padding: 0;
 }
 
 li {
-  font-size: 18px;
-  margin-bottom: 10px;
+font-size: 18px;
+margin-bottom: 10px;
 }
 
 a {
-  text-decoration: none;
-  color: #f3f4f5;
+text-decoration: none;
+color: #f3f4f5;
 }
 
 /* Style the map iframe */
 .map iframe {
-  width: 100%;
-  height: 100%;
-  border: rgb(96, 96, 223);
+width: 100%;
+height: 100%;
+border: rgb(96, 96, 223);
 }
 
 /* Style service hours for better readability */
 ul ul li {
-  margin-left: 20px;
+margin-left: 20px;
 }
 
 .contact-form {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 label {
-  display: block;
-  margin-bottom: 8px;
+display: block;
+margin-bottom: 8px;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+width: 100%;
+padding: 8px;
+margin-bottom: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
 }
 
 button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+background-color: #4caf50;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
 }
 
 button:hover {
-  background-color: #45a049;
+background-color: #45a049;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: transparent; /* Remove background color */
+  width: 100%;
+}
+
+.welcome-text {
+  font-size: 3em;
+  font-family:fantasy ;
+  color: white; /* Set text color to white */
+}
+
+.Big{
+  color: rgb(7, 7, 7);
+  font-size: 3em;
+  font-family:fantasy ;
+  font-weight: 900;
+  font-style:normal;
+  /* display: inline-block; */
+}
+
+.img-fluid {
+  margin-top: -20px; /* Adjust the negative margin as needed */
 }
 
 /* Add more styles as needed */

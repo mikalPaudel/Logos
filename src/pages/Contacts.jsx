@@ -1,9 +1,8 @@
 import React from 'react';
-import ContactForm from '../components/ContactForm';
 
 const Contacts = () => {
   return (
-    <div className="contact-container">
+    <div className="contact-container gap-8 p-6">
       <div className="map">
 
         {<iframe 
