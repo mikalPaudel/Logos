@@ -1,97 +1,65 @@
-import React from 'react'
-// import CarousMin from '../components/CarousMin'
+import React from 'react';
 
 const Ministries = () => {
+  const ministries = [
+    {
+      title: "Youth Ministry",
+      image: "./images/Youth2.jpg",
+      description: "Youth Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at youth@logos.com",
+    },
+    {
+      title: "Children Ministry",
+      image: "./images/children.jpg",
+      description: "Children Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at youth@logos.com",
+    },
+    {
+      title: "House Fellowship",
+      image: "./images/home.jpg",
+      description: "House Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at youth@logos.com",
+    },
+    {
+      title: "Women Fellowship",
+      image: "./images/women.jpg",
+      description: "Women Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at youth@logos.com",
+    },
+    {
+      title: "Night Fellowship",
+      image: "./images/night.jpg",
+      description: "Night Fellowship will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at youth@logos.com",
+    },
+  ];
+
   return (
-    <> 
-  <div class="container gap-8"> 
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-    <center> 
-      <div className="image-overlay txt-black"><center><h1>Youth Ministry</h1></center></div>
-      <img src="./images/Youth2.jpg" class="img-fluid" alt="Youth" />
-      {/* <CarousMin/> */}
-    </center></div>
-    <div className="col-md-6 text-center d-flex align-self-sm-center">
-      <center>  <div class="p-2">
-    <p>Youth Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at  youth@logos.com </p>
-     </div> </center>
-  </div>
-  </div>
-</div>
-<hr />
-<div class="container"> 
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-    <center> 
-      <div className="image-overlay txt-black"><center><h1>Children Ministry</h1></center></div>
-      <img src="./images/children.jpg" class="img-fluid" alt="Youth" />
-    </center></div>
-     <div className="col-md-6 text-center d-flex align-self-sm-center">
-      <center>  <div class="p-2">
-      <center>
-        <ul>
-        <h1> <p>Children Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at  youth@logos.com </p></h1>
-          <li><strong>Service Hours:</strong></li>
-          <ul>
-          <li><strong>Saturday:</strong> 10:00 AM - 12:00 PM</li>
-            <li><strong>Contact no:</strong> 9876543210</li>
-          </ul>
-        </ul></center>
-     </div> </center>
-  </div>
-  </div>
-</div>
-<hr />
-<div class="container"> 
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-    <center> 
-      <div className="image-overlay txt-black"><center><h1>House Fellowship</h1></center></div>
-      <img src="./images/home.jpg" class="img-fluid" alt="Youth" />
-    </center></div>
-    <div className="col-md-6 text-center d-flex align-self-sm-center">
-      <center>  <div class="p-2">
-      <p>House Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at  youth@logos.com </p>
-     </div> </center>
-  </div>
-  </div>
-</div>
-<hr />
+    <div id="ministriesCarousel" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-inner">
+        {ministries.map((ministry, index) => (
+          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-md-6">
+                  <img src={ministry.image} className="d-block w-100 img-fluid" alt={ministry.title} />
+                </div>
+                <div className="col-md-6 d-flex align-items-center">
+                  <div className="p-3">
+                    <h1>{ministry.title}</h1>
+                    <p>{ministry.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#ministriesCarousel" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#ministriesCarousel" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+  );
+};
 
- <div class="container"> 
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-    <center> 
-      <div className="image-overlay txt-black"><center><h1>Women Fellowship</h1></center></div>
-      <img src="./images/women.jpg" class="img-fluid" alt="Youth" />
-    </center></div>
-     <div className="col-md-6 text-center d-flex align-self-sm-center">
-      <center>  <div class="p-2">
-      <p>Women Ministry will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at  youth@logos.com </p>
-     </div> </center>
-  </div>
-  </div>
-</div>
-<hr />
- <div class="container"> 
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-    <center> 
-      <div className="image-overlay txt-black"><center><h1>Night Fellowship</h1></center></div>
-      <img src="./images/night.jpg" class="img-fluid" alt="Youth" />
-    </center></div>
-    <div className="col-md-6 text-center d-flex align-self-sm-center">
-      <center>  <div class="p-2 ">
-      <p>Night Fellowship will take place every Saturday 12:30-1:45pm. The Youth meet in the main church hall after church worship to continue Bible Study and other activities. For further information about Youth Ministry, please call David at 9810000000 or email at  youth@logos.com </p>
-     </div> </center>
-  </div>
-  </div>
-</div>
-
-    </>
-    
-  )
-}
-
-export default Ministries
+export default Ministries;
