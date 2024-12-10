@@ -37,7 +37,7 @@ const Ministries = () => {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-md-6">
-                  <img src={ministry.image} className="d-block w-100 img-fluid" alt={ministry.title} />
+                  <img src={ministry.image} className="d-block img-fluid w-100" style={{ height: '300px', objectFit: 'cover' }} alt={ministry.title} />
                 </div>
                 <div className="col-md-6 d-flex align-items-center">
                   <div className="p-3">

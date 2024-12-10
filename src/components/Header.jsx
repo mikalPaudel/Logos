@@ -4,8 +4,10 @@ import HomePage from '../pages/HomePage';
 import About from '../pages/About';
 import Ministries from '../pages/Ministries';
 import Contacts from '../pages/Contacts';
+import { useTheme } from '../context/ThemeContext'; 
 
 const Header = () => {
+  const { theme, toggleTheme } = useTheme();
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
   // const location = useLocation(); 
@@ -44,25 +46,11 @@ const Header = () => {
           <li className="nav-item"><NavLink to="/ministries" className="nav-link">Ministry</NavLink></li>
           <li className="nav-item"><NavLink to="/contacts" className="nav-link">Contact Us</NavLink></li>
         </ul>
+        <button onClick={toggleTheme} className="theme-toggle-btn">
+        Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+      </button>
+
       </header>
-      {/* <main>
-        <section id="home">
-          <h2>Home</h2>
-          <HomePage />
-        </section>
-        <section id="about">
-          <h2>About</h2>
-          <About />
-        </section>
-        <section id="ministry">
-          <h2>Ministry</h2>
-          <Ministries />
-        </section>
-        <section id="contact">
-          <h2>Contact</h2>
-          <Contacts />
-        </section>
-      </main> */}
     </div>
   );
 };

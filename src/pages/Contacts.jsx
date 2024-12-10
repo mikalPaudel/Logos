@@ -2,7 +2,19 @@ import React from 'react';
 
 const Contacts = () => {
   return (
-    <div className="contact-container gap-8 p-6">
+    <div className="contact-container container">
+      
+      <div className="contact-details">
+        <center><b><h1>Contact Us</h1></b>
+        <ul style={{ listStyleType: 'none'}}>
+          <li><strong>Weekly Service Hours:</strong></li>
+          <ul style={{ listStyleType: 'none'}}>
+          <li><strong>Saturday:</strong> 10:00 AM - 12:00 PM</li>
+            <li><strong>Sunday:</strong> 9:00 AM - 12:00 PM</li>
+            <li><strong>Wednesday:</strong> 7:00 PM - 8:30 PM</li>
+          </ul>
+        </ul></center>
+      </div>
       <div className="map">
 
         {<iframe 
@@ -14,19 +26,6 @@ const Contacts = () => {
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
           </iframe>}
-      </div>
-      <div className="contact-details">
-        <center><b><h1>Contact Us</h1></b>
-        {/* <ContactForm/> */}
-        <ul>
-          <li><strong>Weekly Service Hours:</strong></li>
-          <ul>
-          <li><strong>Saturday:</strong> 10:00 AM - 12:00 PM</li>
-            <li><strong>Sunday:</strong> 9:00 AM - 12:00 PM</li>
-            <li><strong>Wednesday:</strong> 7:00 PM - 8:30 PM</li>
-            {/* Add more days and hours as needed */}
-          </ul>
-        </ul></center>
       </div>
     </div>
   );

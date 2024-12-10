@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel from '../components/Carousel'
+import Banner from '../components/Banner'
 
 const HomePage = () => {
   return (
@@ -8,7 +8,7 @@ const HomePage = () => {
   <div class="row justify-content-center">
     <div class="col-md-8">
     <center> 
-      <Carousel />
+      <Banner />
     </center></div>
     <div className="col-md-4 text-center d-flex align-self-sm-center">
       <center>  <div class="Big">

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Carousel = () => {
+const Banner = () => {
   return (
-      <div className="carousel-container">
-      <img src="./images/Youth1.jpg" className="carousel-image" alt="Youth" />
+      <div className='card'>
+      <img src="./images/Youth1.jpg" alt="Youth" />
       <div className="text-overlay">
         <h1 className="welcome-text">Welcome To Our Church</h1>
       </div>
@@ -11,4 +11,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Banner;

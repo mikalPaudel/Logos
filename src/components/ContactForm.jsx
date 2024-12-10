@@ -22,13 +22,6 @@ const ContactForm = () => {
   
       console.log('Form submitted:', formData);
   
-    //  // Assuming you want to clear the form after submission
-    //  setFormData({
-    //     name: '',
-    //     email: '',
-    //     message: '',
-    //   });
-
         // Redirect to Contacts page
         navigate('/contacts');
 

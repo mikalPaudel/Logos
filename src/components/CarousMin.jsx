@@ -12,14 +12,7 @@ const CarousMin = () => {
       </div>
       
       <div class="carousel-item">
-        <img src="./images/Fellowship.jpg" alt="..."/>
-        {/* <div className="carousel-caption"> */}
-        {/* <h3>Los Angeles</h3>
-    <p>We had such a great time in LA!</p> */}
-           {/* <center><h1>Let's Worship Together</h1>
-        <p>Welcome to our church. Join us for a meaningful worship experience.</p></center> */}
-        {/* </div> */}
-       
+        <img src="./images/Fellowship.jpg" alt="..."/>       
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
