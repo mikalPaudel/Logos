@@ -4,9 +4,8 @@ import Banner from '../components/Banner'
 const HomePage = () => {
   return (
     <>
-      <div class="container"> 
-  <div class="row justify-content-center">
-    <div class="col-md-8">
+  <div className="row justify-content-center">
+    <div className="col-md-8">
     <center> 
       <Banner />
     </center></div>
@@ -16,7 +15,6 @@ const HomePage = () => {
      </div> </center>
   </div>
   </div>
-</div>
     </>
     
   )

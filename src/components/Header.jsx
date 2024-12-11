@@ -33,7 +33,7 @@ const Header = () => {
        <header className={`d-flex justify-content-between align-items-center py-3 text-xl-start ${headerClass}`}>
         {/* Logo */}
         <div className="logo">
-          <img src="./images/logos.jpg" alt="Logo" width="50" height="50" />
+          <img src="./images/logos.jpg" alt="Logo" width="40" height="40" style={{border:'50%'}} />
           <span className="logo-text">LOGOS CHURCH</span>
         </div>
 
