@@ -2,6 +2,8 @@ import React from 'react';
 
 const Contacts = () => {
   return (
+    <div  style={{height:'100vh', width:'100%'}}>
+      <h1 style={{fontSize:'5.5em', textShadow:'rgb(255,255,0)', textAlign:'center'}}>Contact Us</h1>
     <div className="container d-flex justify-content-evenly">
       <div className="map">
         {<iframe 
@@ -24,7 +26,7 @@ const Contacts = () => {
           </ul>
         </ul></center>
       </div>
-      
+      </div>
     </div>
   );
 };

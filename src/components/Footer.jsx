@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="py-3 bg-white text-dark ">
+    <footer className="py-3">
+      <hr />
       <div className="container-fluid">
         {/* Row 1: Contact Info */}
         <div className="row text-center">
@@ -18,18 +19,18 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-5 ml-md-10">
           <Link to="mailto:abc@gmail.com">
-             <FaEnvelope color='black'/>
+             <FaEnvelope/>
             </Link>
             <p>Email: abc@gmail.com</p>
           </div>
           <div className="col-md-4">
             <Link to="https://www.facebook.com/profile.php?id=100094953342789">
-              <FaFacebook color='black'/>
+              <FaFacebook/>
             </Link>
             <p>Facebook: Logos Church Butwal</p>
           </div>
           <div className="col-md-3">
-            <Link to="#"><FaPhoneAlt color='black'/></Link>
+            <Link to="#"><FaPhoneAlt/></Link>
             <p>Phone: (123) 456-7890</p>
           </div>
         </div>

@@ -30,7 +30,9 @@ const Ministries = () => {
   ];
 
   return (
-    <div id="ministriesCarousel" className="carousel slide" data-bs-ride="carousel">
+    <div id="ministriesCarousel" className="carousel slide" data-bs-ride="carousel"  style={{height:'100vh', width:'100%'}}>
+      
+      <h1 style={{fontSize:'5.5em', textShadow:'rgb(255,255,0)', textAlign:'center'}}>Our Ministries</h1>
       <div className="carousel-inner">
         {ministries.map((ministry, index) => (
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
@@ -38,7 +40,9 @@ const Ministries = () => {
               <div className="row justify-content-center">
                 <div className="col-md-6">
                   <img src={ministry.image} className="d-block img-fluid w-100" style={{ height: '300px', objectFit: 'cover' }} alt={ministry.title} />
+                  
                 </div>
+                 
                 <div className="col-md-6 d-flex align-items-center">
                   <div className="p-3">
                     <h1>{ministry.title}</h1>
@@ -47,14 +51,15 @@ const Ministries = () => {
                 </div>
               </div>
             </div>
+           
           </div>
         ))}
       </div>
-      <button className="carousel-control-prev" type="button" data-bs-target="#ministriesCarousel" data-bs-slide="prev">
+      <button className="carousel-control-prev" style={{borderRadius:'50%', height:'5em', width:'5em'}} type="button" data-bs-target="#ministriesCarousel" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
-      <button className="carousel-control-next" type="button" data-bs-target="#ministriesCarousel" data-bs-slide="next">
+      <button className="carousel-control-next" style={{borderRadius:'50%', height:'5em', width:'5em'}} type="button" data-bs-target="#ministriesCarousel" data-bs-slide="next">
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
