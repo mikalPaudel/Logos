@@ -1,9 +1,20 @@
 import React from 'react';
+import HeroSection from '../components/HeroSection';
+
 
 const Contacts = () => {
+  const breadcrumbLinks = [
+    { label: "Home", to: "/", active: false },
+    { label: "Contact", to: "/contacts", active: true },
+  ];
   return (
-    <div  style={{height:'100vh', width:'100%'}}>
-      <h1 style={{fontSize:'5.5em', textShadow:'rgb(255,255,0)', textAlign:'center'}}>Contact Us</h1>
+    <div  style={{width:'100%'}}>
+      {/* Hero Section */}
+     <HeroSection
+     title="Contact Us"
+     breadcrumbLinks={breadcrumbLinks}
+   />
+      <h1 style={{fontSize:'2.2em',fontWeight:'bold', textShadow:'rgb(255,255,0)', textAlign:'center'}}>Contact Us</h1>
     <div className="container d-flex justify-content-evenly">
       <div className="map">
         {<iframe 

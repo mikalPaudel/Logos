@@ -1,4 +1,7 @@
-import React from 'react';
+import {React, useState} from 'react';
+import HeroSection from '../components/HeroSection';
+import { Modal, Button } from "react-bootstrap";
+
 
 const Ministries = () => {
   const ministries = [
@@ -29,40 +32,72 @@ const Ministries = () => {
     },
   ];
 
+  const breadcrumbLinks = [
+    { label: "Home", to: "/", active: false },
+    { label: "Ministry", to: "/ministry", active: true },
+  ];
+
+  const [showModal, setShowModal] = useState(false);
+  const [currentItem, setCurrentItem] = useState({});
+
+  const handleShow = (item) => {
+    setCurrentItem(item);
+    setShowModal(true);
+  };
+
+  const handleClose = () => setShowModal(false);
+
   return (
-    <div id="ministriesCarousel" className="carousel slide" data-bs-ride="carousel"  style={{height:'100vh', width:'100%'}}>
-      
-      <h1 style={{fontSize:'5.5em', textShadow:'rgb(255,255,0)', textAlign:'center'}}>Our Ministries</h1>
-      <div className="carousel-inner">
+     
+    <div style={{width:'100%'}}>
+      {/* Hero Section */}
+     <HeroSection
+     title="Our Ministry"
+     breadcrumbLinks={breadcrumbLinks}
+   />
+
+      {/* Gallery */}
+      <div className="row g-4">
         {ministries.map((ministry, index) => (
-          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-md-6">
-                  <img src={ministry.image} className="d-block img-fluid w-100" style={{ height: '300px', objectFit: 'cover' }} alt={ministry.title} />
-                  
-                </div>
-                 
-                <div className="col-md-6 d-flex align-items-center">
-                  <div className="p-3">
-                    <h1>{ministry.title}</h1>
-                    <p>{ministry.description}</p>
-                  </div>
-                </div>
+          <div className="col-12 col-sm-6 col-md-4" key={index}>
+            <div
+              className="card h-100 border-0 shadow-sm"
+              style={{ cursor: "pointer" }}
+              onClick={() => handleShow(ministry)}
+            >
+              <img
+                src={ministry.image}
+                alt={ministry.title}
+                className="card-img-top img-fluid"
+                style={{ objectFit: "cover", height: "200px" }}
+              />
+              <div className="card-body text-center">
+                <h5 className="card-title">{ministry.title}</h5>
               </div>
             </div>
-           
           </div>
         ))}
       </div>
-      <button className="carousel-control-prev" style={{borderRadius:'50%', height:'5em', width:'5em'}} type="button" data-bs-target="#ministriesCarousel" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next" style={{borderRadius:'50%', height:'5em', width:'5em'}} type="button" data-bs-target="#ministriesCarousel" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+
+      {/* Modal */}
+      <Modal show={showModal} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{currentItem.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img
+            src={currentItem.image}
+            alt={currentItem.title}
+            className="img-fluid mb-3"
+          />
+          <p>{currentItem.description}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
