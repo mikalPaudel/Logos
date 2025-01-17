@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mikalPaudel/Logos/static/css/main.d8548757.css",
+    "main.js": "/mikalPaudel/Logos/static/js/main.96e3e8b8.js",
+    "static/js/787.9fd39e43.chunk.js": "/mikalPaudel/Logos/static/js/787.9fd39e43.chunk.js",
+    "index.html": "/mikalPaudel/Logos/index.html",
+    "main.d8548757.css.map": "/mikalPaudel/Logos/static/css/main.d8548757.css.map",
+    "main.96e3e8b8.js.map": "/mikalPaudel/Logos/static/js/main.96e3e8b8.js.map",
+    "787.9fd39e43.chunk.js.map": "/mikalPaudel/Logos/static/js/787.9fd39e43.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8548757.css",
+    "static/js/main.96e3e8b8.js"
+  ]
+}
