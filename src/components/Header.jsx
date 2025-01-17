@@ -1,10 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
 import { IoMdMenu } from "react-icons/io";
 
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="header-container">
@@ -46,11 +44,6 @@ const Header = () => {
                 <NavLink to="/contacts" className="nav-link">Contact Us</NavLink>
               </li>
             </ul>
-
-            {/* Dark mode switch inside the burger menu */}
-            <button onClick={toggleTheme} className="theme-toggle-btn w-100 mt-3">
-              Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-            </button>
           </div>
         </div>
 
