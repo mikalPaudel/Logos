@@ -31,9 +31,9 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink to="/events" className="nav-link">Events</NavLink>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <NavLink to="/about" className="nav-link">About</NavLink>
               </li>
